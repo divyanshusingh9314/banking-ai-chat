@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: banking-ai-chat
+
+ai:
+  openai:
+    base-url: https://api.openai.com/v1
+    api-key: ${OPENAI_API_KEY}
+    model: ${OPENAI_MODEL:gpt-5.5}
+    timeout: 20s
+    max-output-tokens: 600
+    retry:
+      max-retries: 2
+      min-backoff: 300ms
+      max-backoff: 3s
